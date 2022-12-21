@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>滑动的菜单</title>
+  </head>
+  <body>
+    <ul class="box">
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+    </ul>
+    <ul class="box">
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+    </ul>
+    <ul class="box">
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">1</a></li>
+    </ul>
+    <style type="text/css">
+    .box { margin:0; padding:0; font-size:12px; list-style:none; width:120px;
+    float:left; } li { width:80px; line-height:20px; height:20px; margin:1px;
+    background-color:#ccc; text-align:left; border-radius: 0 10px 10px 0;
+    border-left:3px solid #333; /* 持续时间较长的过渡效果 */
+    -webkit-transition:all 1s east-out; -moz-transition:all 1s ease-out;
+    transition:all 1s ease-out; } li a { display:block; text-decoration:none;
+    font-size:12px; padding-left:5px; font-family:Arial; font-weight:bold;
+    color:#666; } li:hover { background-color:#f90; width:100px; /*
+    持续时间较短的过渡效果 */ -webkit-transition:all 200ms linear;
+    -moz-transition:all 200ms linear; transition:all 200ms linear; } li:hover a
+    { color:#FFF; }
+</html>
