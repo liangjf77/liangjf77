@@ -1,0 +1,27 @@
+<!DOCTYPE html>>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/CSS">
+      canvas {
+        border: 1px solid #ccc;
+      }
+    </style>
+    <script type="text/javascript">
+      function DrawText() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        context.font = "98px 黑体";
+        context.fillStyle = "#036";
+        context.textAlign = "center";
+        context.fillText("多情自古伤离别", 100, 120, 200);
+      }
+      window.addEventListener("load", DrawText, true);
+    </script>
+  </head>
+  <body style="text-align: center">
+    <canvas id="canvas" width="200" height="200"
+      >你的浏览器不支持该功能！</canvas
+    >
+  </body>
+</html>
