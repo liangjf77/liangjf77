@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>绘制两个半透明的图</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript">
+      function drawLine() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        //先绘制一个灰色的圆形
+        context.beginPath();
+        context.arc(150, 100, 50, 0, Math.PI * 2, true);
+        context.fillStyle = "rgba(0,0,0,0.1)";
+        context.fill();
+        context.beginPath();
+        context.arc(150, 100, 50, 0((-Math.PI * 2) / 3), true);
+        context.strokeStyle = "rgba(255,135,0,1)";
+        context.lineWidth = 5;
+        context.stroke();
+      }
+      drawLine();
+    </script>
+  </body>
+</html>
