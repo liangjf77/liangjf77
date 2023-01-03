@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>绘制贝赛尔曲线原理解析图</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        //先绘制一个灰色的辅助线段，宽 2 像素
+        context.beginPath(); //添加第一个子路径
+        context.moveTo(100, 180);
+        context.lineTo(110, 80);
+        context.moveTo(260, 100);
+        context.lineTo(300, 200);
+        context.strokeStyle = "rgba(0,0,0,0.4)"; //线框颜色为黑色，透明度为0.4
+        context.stroke();
+        // 再绘制一条曲线，宽3 像素， 线条颜色为橘黄色
+        context.beginPath();
+        context.moveTo(100, 180); //确定当前位置，与第一个子路径一致
+        context.bezierCurveTo(110, 80, 260, 100, 300, 200);
+        context.lineWidth = 3;
+        context.strokeStyle = "rgba(255,135,0,1)"; //线框颜色为橘黄色
+        context.stroke();
+      }
+    </script>
+  </body>
+</html>
