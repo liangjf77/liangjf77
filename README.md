@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @liangjf77
 - 👀 I’m interested in natural language processing
-- 🌱 I’m currently learning jupyter notebook, wordcloud
+- 🌱 I’m currently learning Java
 - 💞️ I’m looking to collaborate on ...
 - 📫 my email is liangjf77@hotmail.com
 
