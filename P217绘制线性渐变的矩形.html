@@ -1,0 +1,24 @@
+<style type="text/css">
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body onload="draw()">
+  <canvas id="canvas"></canvas>
+  <script type="text/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+      //创建渐变对象：线性渐变
+      var grd=context.createLinearGradient(0,0,300,0);
+      //设置渐变颜色以及方式
+      grd.addColorStop(0,"#f90");
+      grd.addColorStop(1,"#0f0");
+      //将填充样式设置为线性渐变对象
+      context.fillStyle=grd
+      context.fillRect(0,0,300,80);
+    }
+  </script>
+</body>
+</html>
