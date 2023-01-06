@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Canvas</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script type="text/javascript">
+      window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        var img = new Image(); // 使用Image()构造函数创建图像对象
+        img.src = "../images/3.png"; //指定图像的文件地址
+
+        img.onerror = function () {
+          // handle error
+        };
+
+        img.onload = function () {
+          var ptrn = context.createPattern(img, "repeat"); //创建一个铁图模式，循环平铺图像
+          context.fillStyle = ptrn; //设置填充样式为贴图模式
+          context.fillRect(0, 0, 300, 200); //填充矩形
+        };
+      };
+    </script>
+  </body>
+</html>
