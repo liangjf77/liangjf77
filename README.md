@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @liangjf77
 - 👀 I’m interested in natural language processing
 - 🌱 I’m currently learning Java
-- 💞️ I’m looking to collaborate on ...
+- 💞️ I’m looking to have my own website, can anyone tell me how to build a website?
 - 📫 my email is liangjf77@hotmail.com
 
 <!---
