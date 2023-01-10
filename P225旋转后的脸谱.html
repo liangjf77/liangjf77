@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script type="text/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        // 设置移动偏移量
+        context.translate(100, 100);
+        // 旋转图像，顺时针旋转30度
+        context.rotate(Math.PI / 6);
+        //缩放图像，在水平方向和垂直方向设置不同的缩放因子
+        context.scale(0.6, 0.4);
+        // 绘制一个圆形脸谱
+        ArcFace(context);
+      }
+      function ArcFace(context) {
+        //绘制一个圆形边框
+        context.beginPath();
+        context.arc(0, 0, 90, 0, Math.PI * 2, true);
+        context.lineWidth = 5;
+        context.strokeStyle = "#f90";
+        context.stroke();
+        //绘制一个脸谱
+        context.beginPath();
+        context.moveTo(-30, -30);
+        context.lineTo(-30, -20);
+        context.moveTo(30, -30);
+        context.lineTo(30, -20);
+        context.moveTo(-20, 30);
+        context.bezierCurveTo(-20, 44, 20, 30, 30, 20);
+        context.strokeStyle = "#000";
+        context.lineWidth = 10;
+        context.lineCap = "round";
+        context.stroke();
+      }
+    </script>
+  </body>
+</html>
